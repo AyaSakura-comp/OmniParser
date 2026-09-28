@@ -25,6 +25,15 @@
 - [2024/10] Both Interactive Region Detection Model and Icon functional description model are released! [Hugginface models](https://huggingface.co/microsoft/OmniParser)
 - [2024/09] OmniParser achieves the best performance on [Windows Agent Arena](https://microsoft.github.io/WindowsAgentArena/)! 
 
+## Optional detector-only CPU INT8 service (this fork)
+
+For the opt-in YOLOv9-E **OpenVINO INT8 CPU** API, calibration recipe, dynamic
+800–1280 input sizes, installation and GPU rollback, see
+[CPU INT8 installation](docs/CPU_INT8_INSTALL.md).
+This is a lossy alternative, not a model accuracy upgrade: the 20-site test did
+not meet cosine >=0.99 and GPU FP16 remained faster. The upstream/default
+PyTorch detector and full OCR/caption pipeline are unchanged.
+
 ## Install 
 First clone the repo, and then install environment:
 ```python
